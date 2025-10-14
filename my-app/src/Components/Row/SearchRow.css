@@ -1,0 +1,74 @@
+/* Search Results Container */
+.movie-container {
+    display: flex;
+    overflow-x: auto;
+    overflow-y: hidden;
+    gap: 15px;
+    padding: 20px;
+    background-color: #0a0a0a;
+    border: 2px solid crimson;
+    border-radius: 10px;
+    margin: 20px;
+}
+
+/* Hide scrollbar for cleaner look */
+.movie-container::-webkit-scrollbar {
+    height: 8px;
+}
+
+.movie-container::-webkit-scrollbar-track {
+    background: #1a1a1a;
+    border-radius: 10px;
+}
+
+.movie-container::-webkit-scrollbar-thumb {
+    background: crimson;
+    border-radius: 10px;
+}
+
+.movie-container::-webkit-scrollbar-thumb:hover {
+    background: #b91c1c;
+}
+
+/* Movie Image */
+.img {
+    flex-shrink: 0;
+    border-radius: 8px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    object-fit: cover;
+    cursor: pointer;
+}
+
+.img:hover {
+    transform: scale(1.05);
+    border-color: crimson;
+    box-shadow: 0 8px 20px rgba(220, 20, 60, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .movie-container {
+        padding: 15px;
+        margin: 15px;
+        gap: 10px;
+    }
+
+    .img {
+        height: 150px !important;
+        width: 255px !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .movie-container {
+        padding: 10px;
+        margin: 10px;
+        gap: 8px;
+    }
+
+    .img {
+        height: 120px !important;
+        width: 204px !important;
+    }
+}

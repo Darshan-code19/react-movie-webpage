@@ -1,0 +1,324 @@
+/* Cast Details Container */
+.cast-details-container {
+  min-height: 100vh;
+  background-color: #000000;
+  color: white;
+}
+
+/* Hero Section */
+.cast-hero {
+  background: linear-gradient(to bottom, #1a1a1a 0%, #000000 100%);
+  padding: 40px 20px;
+  position: relative;
+}
+
+.back-btn {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-bottom: 30px;
+  transition: background-color 0.3s ease;
+}
+
+.back-btn:hover {
+  background-color: #b91c1c;
+}
+
+.cast-hero-content {
+  display: flex;
+  gap: 40px;
+  max-width: 1400px;
+  margin: 0 auto;
+  align-items: flex-start;
+}
+
+/* Profile Image */
+.cast-profile-image {
+  flex-shrink: 0;
+  width: 300px;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.cast-profile-image img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Profile Info */
+.cast-profile-info {
+  flex: 1;
+}
+
+.cast-profile-info h1 {
+  font-size: 3rem;
+  margin-bottom: 20px;
+  color: white;
+}
+
+.known-for,
+.birthday,
+.popularity {
+  font-size: 1.1rem;
+  color: #ccc;
+  margin-bottom: 12px;
+}
+
+.known-for {
+  color: crimson;
+  font-weight: bold;
+}
+
+.biography {
+  margin-top: 30px;
+}
+
+.biography h3 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: white;
+}
+
+.biography p {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #ddd;
+  text-align: justify;
+}
+
+/* Movies Section */
+.cast-movies-section {
+  padding: 60px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cast-movies-section h2 {
+  font-size: 2rem;
+  margin-bottom: 30px;
+  color: white;
+  text-align: center;
+}
+
+/* Movies Grid */
+.movies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 25px;
+}
+
+/* Movie Card */
+.movie-card {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  cursor: pointer;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.movie-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 20px rgba(220, 20, 60, 0.4);
+  border-color: crimson;
+}
+
+/* Movie Poster */
+.movie-poster {
+  width: 100%;
+  height: 300px;
+  overflow: hidden;
+  background-color: #2a2a2a;
+}
+
+.movie-poster img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Movie Info */
+.movie-info {
+  padding: 15px;
+}
+
+.movie-info h4 {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+  color: white;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+
+.character {
+  font-size: 0.9rem;
+  color: #999;
+  margin-bottom: 5px;
+  font-style: italic;
+}
+
+.release-year {
+  font-size: 0.85rem;
+  color: #777;
+  margin-bottom: 5px;
+}
+
+.rating {
+  font-size: 0.9rem;
+  color: #ffd700;
+  font-weight: bold;
+}
+
+/* Loading State */
+.cast-details-loading {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000000;
+  color: white;
+}
+
+.spinner {
+  border: 4px solid #333;
+  border-top: 4px solid crimson;
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+  animation: spin 1s linear infinite;
+  margin-bottom: 20px;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.cast-details-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000000;
+  color: white;
+}
+
+.cast-details-error p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+.cast-details-error button {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* No Movies Message */
+.no-movies {
+  text-align: center;
+  padding: 60px 20px;
+  color: #999;
+  font-size: 1.2rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .cast-hero-content {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .cast-profile-image {
+    width: 250px;
+  }
+
+  .cast-profile-info h1 {
+    font-size: 2.5rem;
+  }
+
+  .biography p {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .cast-profile-image {
+    width: 200px;
+  }
+
+  .cast-profile-info h1 {
+    font-size: 2rem;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    gap: 15px;
+  }
+
+  .movie-poster {
+    height: 225px;
+  }
+
+  .cast-movies-section h2 {
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .cast-profile-image {
+    width: 180px;
+  }
+
+  .cast-profile-info h1 {
+    font-size: 1.5rem;
+  }
+
+  .known-for,
+  .birthday,
+  .popularity {
+    font-size: 0.95rem;
+  }
+
+  .biography h3 {
+    font-size: 1.2rem;
+  }
+
+  .biography p {
+    font-size: 0.9rem;
+  }
+
+  .movies-grid {
+    grid-template-columns: repeat(auto-fill, minmax(130px, 1fr));
+    gap: 10px;
+  }
+
+  .movie-poster {
+    height: 195px;
+  }
+
+  .back-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}

@@ -1,0 +1,400 @@
+/* Movie Page Container */
+.movie-page {
+  min-height: 100vh;
+  background-color: #000000;
+  color: white;
+}
+
+/* Hero Section */
+.hero {
+  position: relative;
+  min-height: 70vh;
+  background-image: var(--backdrop-image);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+}
+
+.overlay {
+  background: linear-gradient(to right, rgba(0, 0, 0, 0.95) 0%, rgba(0, 0, 0, 0.7) 50%, rgba(0, 0, 0, 0.95) 100%);
+  width: 100%;
+  padding: 60px 40px;
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Poster Image */
+.poster {
+  width: 300px;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8);
+  flex-shrink: 0;
+}
+
+/* Movie Details */
+.details {
+  flex: 1;
+  max-width: 700px;
+}
+
+.details h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: white;
+  line-height: 1.2;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  color: #ccc;
+  font-style: italic;
+  margin-bottom: 15px;
+}
+
+.meta {
+  font-size: 1.1rem;
+  color: #ddd;
+  margin-bottom: 15px;
+}
+
+.genres {
+  font-size: 1rem;
+  color: crimson;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.overview {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #ddd;
+  margin-bottom: 30px;
+  text-align: justify;
+}
+
+/* Action Buttons */
+.actions {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.btn {
+  padding: 12px 30px;
+  font-size: 16px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn.primary {
+  background-color: crimson;
+  color: white;
+}
+
+.btn.primary:hover {
+  background-color: #b91c1c;
+  transform: scale(1.05);
+}
+
+.btn:not(.primary) {
+  background-color: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+}
+
+.btn:not(.primary):hover {
+  background-color: white;
+  color: black;
+}
+
+/* Trailer Section */
+.trailer-section {
+  padding: 60px 20px;
+  background-color: #0a0a0a;
+}
+
+.trailer-wrapper {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  padding-bottom: 56.25%;
+  height: 0;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 10px 40px rgba(220, 20, 60, 0.3);
+}
+
+.trailer-wrapper iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/* Cast Section */
+.cast-section {
+  padding: 60px 20px;
+  background-color: #000000;
+}
+
+.cast-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1400px;
+  margin: 0 auto 30px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.cast-header h2 {
+  font-size: 2rem;
+  color: white;
+  margin: 0;
+}
+
+.view-all-cast-btn {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: bold;
+}
+
+.view-all-cast-btn:hover {
+  background-color: #b91c1c;
+  transform: translateX(5px);
+}
+
+/* Cast Grid */
+.cast-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+  gap: 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.cast-card {
+  background-color: #1a1a1a;
+  border-radius: 10px;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.cast-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(220, 20, 60, 0.4);
+}
+
+.cast-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.cast-info {
+  padding: 12px;
+  text-align: center;
+}
+
+.cast-name {
+  font-size: 0.95rem;
+  font-weight: bold;
+  color: white;
+  margin-bottom: 5px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.cast-character {
+  font-size: 0.85rem;
+  color: #999;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* Loading State */
+.movie-loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000000;
+}
+
+.spinner {
+  border: 4px solid #333;
+  border-top: 4px solid crimson;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Error State */
+.movie-error {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-color: #000000;
+  color: white;
+  gap: 20px;
+}
+
+.movie-error p {
+  font-size: 1.3rem;
+}
+
+.movie-error button {
+  background-color: crimson;
+  color: white;
+  border: none;
+  padding: 12px 24px;
+  font-size: 16px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .overlay {
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 30px;
+  }
+
+  .poster {
+    width: 250px;
+  }
+
+  .details h1 {
+    font-size: 2.5rem;
+  }
+
+  .overview {
+    text-align: left;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    padding: 30px 20px;
+  }
+
+  .poster {
+    width: 200px;
+  }
+
+  .details h1 {
+    font-size: 2rem;
+  }
+
+  .tagline {
+    font-size: 1rem;
+  }
+
+  .meta,
+  .overview {
+    font-size: 0.95rem;
+  }
+
+  .cast-grid {
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    gap: 15px;
+  }
+
+  .cast-card img {
+    height: 160px;
+  }
+
+  .cast-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .view-all-cast-btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero {
+    min-height: auto;
+  }
+
+  .overlay {
+    padding: 20px 15px;
+  }
+
+  .poster {
+    width: 180px;
+  }
+
+  .details h1 {
+    font-size: 1.5rem;
+  }
+
+  .tagline {
+    font-size: 0.9rem;
+  }
+
+  .meta,
+  .overview {
+    font-size: 0.85rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
+  .cast-grid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 10px;
+  }
+
+  .cast-card img {
+    height: 140px;
+  }
+
+  .cast-name {
+    font-size: 0.85rem;
+  }
+
+  .cast-character {
+    font-size: 0.75rem;
+  }
+
+  .trailer-section,
+  .cast-section {
+    padding: 40px 15px;
+  }
+}

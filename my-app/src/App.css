@@ -1,0 +1,126 @@
+/* Global Styles */
+body {
+  background-color: #000000;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+/* Row Container */
+.row {
+  margin: 40px 0;
+  color: white;
+  padding: 0 20px;
+}
+
+.row h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  color: white;
+  padding-left: 10px;
+}
+
+/* Scroll Container */
+.scroll-container {
+  display: flex;
+  overflow-x: auto;
+  overflow-y: hidden;
+  gap: 15px;
+  padding: 15px 10px;
+  border: 2px solid crimson;
+  border-radius: 10px;
+  background-color: #0a0a0a;
+  scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar */
+.scroll-container::-webkit-scrollbar {
+  height: 8px;
+}
+
+.scroll-container::-webkit-scrollbar-track {
+  background: #1a1a1a;
+  border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb {
+  background: crimson;
+  border-radius: 10px;
+}
+
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #b91c1c;
+}
+
+/* Movie Images in Rows */
+.scroll-container img {
+  flex-shrink: 0;
+  border-radius: 8px;
+  object-fit: cover;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.scroll-container img:hover {
+  transform: scale(1.05);
+  border-color: crimson;
+  box-shadow: 0 8px 20px rgba(220, 20, 60, 0.5);
+}
+
+/* Headings */
+h1 {
+  color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .row {
+    margin: 30px 0;
+    padding: 0 15px;
+  }
+
+  .row h2 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+  }
+
+  .scroll-container {
+    gap: 10px;
+    padding: 10px;
+  }
+
+  .scroll-container img {
+    height: 150px !important;
+    width: 225px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .row {
+    margin: 20px 0;
+    padding: 0 10px;
+  }
+
+  .row h2 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
+
+  .scroll-container {
+    gap: 8px;
+    padding: 8px;
+  }
+
+  .scroll-container img {
+    height: 120px !important;
+    width: 180px !important;
+  }
+}
+
+

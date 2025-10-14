@@ -1,0 +1,99 @@
+/* Navbar Container */
+.nav {
+    color: white;
+    height: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    position: sticky;
+    top: 0;
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    padding: 0 20px;
+}
+
+/* Right Section - Logo */
+.right h1 {
+    color: crimson;
+    font-size: 50px;
+    margin: 0;
+    font-weight: bold;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.right h1:hover {
+    transform: scale(1.05);
+}
+
+/* Left Section - Search Input */
+.left {
+    display: flex;
+    align-items: center;
+}
+
+.left input {
+    height: 40px;
+    width: 300px;
+    font-size: 16px;
+    border: 2px solid crimson;
+    border-radius: 25px;
+    outline: none;
+    padding: 0 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    transition: all 0.3s ease;
+}
+
+.left input::placeholder {
+    color: #999;
+}
+
+.left input:focus {
+    background-color: rgba(255, 255, 255, 0.15);
+    border-color: #ff1744;
+    box-shadow: 0 0 15px rgba(220, 20, 60, 0.5);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav {
+        height: auto;
+        padding: 15px 20px;
+        gap: 15px;
+    }
+
+    .right h1 {
+        font-size: 36px;
+    }
+
+    .left input {
+        width: 250px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        flex-direction: column;
+        padding: 15px 10px;
+        gap: 10px;
+    }
+
+    .right h1 {
+        font-size: 32px;
+    }
+
+    .left input {
+        width: 100%;
+        max-width: 300px;
+        height: 35px;
+        font-size: 14px;
+    }
+}
