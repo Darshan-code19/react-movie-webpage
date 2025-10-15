@@ -1,6 +1,6 @@
 import React from 'react'
 
-const api_key = "6c8667169423f0631688a2422e5ebc69"; // replace with your TMDB API key
+const api_key = " replace with your TMDB API key"; //
 
 const Request = {
   fetchPopularMovies: `movie/popular?api_key=${api_key}&language=en-US&page=1`,
