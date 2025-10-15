@@ -1,48 +1,10 @@
-// // Components/Moviepage/index.jsx
-// import React,{useState,useEffect} from 'react'
-// import "./index.css"
-// import {useParams} from "react-router-dom"
-
-// const baseURL="https://api.themoviedb.org/3/"
-// const api_key = "6c8667169423f0631688a2422e5ebc69";
-// const MoviePage = () => {
-//   const [movie, setmovie] = useState([]);
-//   const {id}=useParams()
-//   useEffect(() => {
-//     fetch(`${baseURL}movie/${id}?api_key=${api_key}&language=en-US`)
-//     .then(res=>res.json())
-//     .then(data=>setmovie(data))
-//   }, [id]);
-//   const handleback=()=>{
-//     window.history.back()
-//   }
-//   return (
-//    <div
-//   className='movie-page'
-//   style={{
-//     backgroundImage: `url(https://image.tmdb.org/t/p/original/${movie.backdrop_path})`,
-//     backgroundSize: "cover",
-//     backgroundPosition: "center",
-//     height: "400px",
-//     color: "white"
-//   }}
-// >
-//   <div className="movie-title">{movie.original_title}</div>
-// </div>
-//   )
-// }
-
-// export default MoviePage;
-
-
-
 import React, { useEffect, useState, useCallback } from 'react';
 import { useParams } from 'react-router-dom';
 import YouTube from 'react-youtube';
 import './index.css';
 
 const BASE_URL = 'https://api.themoviedb.org/3/';
-const API_KEY = 'ab1da08307f82007e9975d4dccf67670';
+const API_KEY = ' replace with your TMDB API key';
 
 const FALLBACK_BACKDROP = 'https://via.placeholder.com/1280x720?text=No+Backdrop';
 const FALLBACK_POSTER = 'https://via.placeholder.com/500x750?text=No+Poster';
