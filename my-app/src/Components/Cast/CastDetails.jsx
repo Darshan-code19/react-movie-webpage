@@ -4,7 +4,7 @@ import axios from 'axios';
 import './CastDetails.css';
 
 const BASE_URL = 'https://api.themoviedb.org/3/';
-const API_KEY = '6c8667169423f0631688a2422e5ebc69';
+const API_KEY = ' replace with your TMDB API key';
 
 const CastDetails = () => {
   const { id } = useParams(); // Get person ID from URL
